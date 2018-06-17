@@ -1,0 +1,14 @@
+.card-alerta-body {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid;
+}
+
+.alerta-item {
+    flex-grow: 1;
+}
+
+.alertas-list {
+    width: 320px;
+    height: 200px;
+}

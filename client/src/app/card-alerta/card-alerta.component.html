@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="card-alerta-body">
+    <h5 class="card-title mb-0">{{alerta.titulo}}</h5>
+  </div>
+  <ul class="list-group list-group-flush alertas-list">
+    <li class="list-group-item alerta-item"><strong>Descricao: </strong>{{alerta.descricao}}</li>
+    <li class="list-group-item alerta-item"><strong>Onde: </strong> {{alerta.ponto_de_venda}}</li>
+    <li class="list-group-item alerta-item"><strong>Quando: </strong>{{alerta.respondida_em | date:"dd/MM/yy HH:mm"}}</li>
+  </ul>
+</div>
