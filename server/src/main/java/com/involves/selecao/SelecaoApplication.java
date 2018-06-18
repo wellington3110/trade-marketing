@@ -16,7 +16,6 @@ public class SelecaoApplication {
 		SpringApplication.run(SelecaoApplication.class, args);
 	}
 
-	//TODO SE HOUVER MAIS BEANS POR EM UM ARQUIVO DE CONFIGURAÇAO
 	@Bean
 	public RestTemplate restTemplate() {
         RestTemplate restTemplate = new RestTemplate();

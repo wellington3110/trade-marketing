@@ -1,14 +1,19 @@
-.card-alerta-body {
-    padding: 15px;
+mat-card {
+    padding: 0px;
+    margin: 10px;
+    width: 300px;
+}
+
+mat-card-title {
+    margin-bottom: 0px;
     text-align: center;
-    border: 1px solid;
+    padding: 10px;
+    border: 2px solid;
 }
 
-.alerta-item {
-    flex-grow: 1;
+mat-card-content {
+    padding: 10px;
+    height: 230px;
+    background-color: #fffcfc;
 }
 
-.alertas-list {
-    width: 320px;
-    height: 200px;
-}

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { IAlerta } from '../../shared/IAlerta';
 
 @Component({
   selector: 'app-card-alerta',
@@ -7,9 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CardAlertaComponent implements OnInit {
 
+  @Input() alerta: IAlerta;
   constructor() { }
 
-  @Input() alerta: any;
+  getCor() {
+    return this.alerta.corTitulo;
+  }
 
   ngOnInit() {
   }

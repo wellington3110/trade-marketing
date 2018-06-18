@@ -1,0 +1,42 @@
+.alertas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-dash{
+    padding: 40px 0px;
+}
+
+.select2-wrapper{
+    margin: 10px 10px 0 10px
+}
+
+.opcoes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.opcoes button {
+    height: 40px;
+    padding: 10px;
+    position: relative;
+    top: 8px;
+    left: 11px;
+    background-color: #c1ce35;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.opcoes button:hover {
+    background-color: #909b14;
+    transition: all 0.5s;
+}
+
+.fechar-mensagem {
+    position: relative;
+    float: right;
+    color: red;
+    cursor: pointer
+}

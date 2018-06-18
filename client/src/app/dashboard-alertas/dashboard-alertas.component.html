@@ -1,0 +1,27 @@
+<div class="container container-dash">
+    <div class="alert alert-success" role="alert" *ngIf="mostrarMensagemDeSucesso">
+        Alertas processados com sucesso
+        <i class="fechar-mensagem" (click)="fecharMensagemDeSucesso()">X</i>
+    </div>
+    <h1>Alertas</h1>
+    <section class="opcoes">
+        <div class="select2-wrapper">
+            <select2 [data]="tiposDeAlerta" [width]="300" [options]="optionsTipoDeAlerta" [value]="value" (valueChanged)="filtrarPelosTiposDeAlerta($event)">
+            </select2>
+        </div>
+        <div class="select2-wrapper">
+            <select2 [data]="pontosDeVenda" [width]="300" [options]="optionsPontosDeVenda" [value]="value" (valueChanged)="filtrarPeloPontoDeVenda($event)">
+            </select2>
+        </div>
+        <button (click)=processarAlertas()>Processar alertas</button>
+    </section>
+
+    <mat-divider class="mt-2 mb-4"></mat-divider>
+
+    <main class="alertas">
+        <ng-container *ngFor="let alerta of alertasCard">
+            <app-card-alerta [alerta]="alerta">
+            </app-card-alerta>
+        </ng-container>
+    </main>
+</div>

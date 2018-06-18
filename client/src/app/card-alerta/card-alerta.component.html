@@ -1,10 +1,19 @@
-<div class="card">
-  <div class="card-alerta-body">
-    <h5 class="card-title mb-0">{{alerta.titulo}}</h5>
-  </div>
-  <ul class="list-group list-group-flush alertas-list">
-    <li class="list-group-item alerta-item"><strong>Descricao: </strong>{{alerta.descricao}}</li>
-    <li class="list-group-item alerta-item"><strong>Onde: </strong> {{alerta.ponto_de_venda}}</li>
-    <li class="list-group-item alerta-item"><strong>Quando: </strong>{{alerta.respondida_em | date:"dd/MM/yy HH:mm"}}</li>
-  </ul>
-</div>
+<mat-card>
+  <mat-card-title [ngStyle]="{'background-color': getCor()}">
+    <strong>{{alerta.label}}</strong>
+  </mat-card-title>
+  <mat-card-content>
+    <p *ngIf="alerta.margem" id="margem">
+      <strong>Margem: </strong>{{alerta.margem}}</p>
+    <p id="aonde">
+      <strong>Aonde: </strong>{{alerta.pontoDeVenda}}</p>
+    <p id="quando">
+      <strong>Quando: </strong>{{alerta.dataCadastro | date:"dd/MM/yyyy HH:mm"}}
+    </p>
+    <p id="sobre">
+      <strong>Sobre: </strong>{{alerta.sobre}}</p>
+    <p id="descricao">
+      <strong>Descrição: </strong>{{alerta.descricao}}</p>
+
+  </mat-card-content>
+</mat-card>

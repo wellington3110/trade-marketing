@@ -10,15 +10,14 @@ public class AlertaDePreco extends Alerta {
 	private Integer margem;
 
 	public AlertaDePreco(Pesquisa pesquisa, AlertaParamsOf params, int margem) {
-		this(pesquisa.getPontoDeVenda(), params.getDescricao(), pesquisa.getProduto(), params.getFlTipo(), margem);
-	}
-
-	public AlertaDePreco(String pontoDeVenda, String descricao, String produto, Integer flTipo, Integer margem) {
-		super(produto, descricao, pontoDeVenda, flTipo);
-		this.margem = margem;
+		super(pesquisa.getProduto(), params.getDescricao(), pesquisa.getPontoDeVenda(), params.getFlTipo(), params.getLabel());
 	}
 
     public AlertaDePreco() { }
+
+	public Integer getMargem() {
+		return margem;
+	}
 
 	@Override
 	public boolean equals(Object o) {
@@ -34,4 +33,6 @@ public class AlertaDePreco extends Alerta {
 
 		return Objects.hash(super.hashCode(), margem);
 	}
+
+
 }
